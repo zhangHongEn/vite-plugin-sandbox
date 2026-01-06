@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/vite-plugin-sandbox"
+    },
+    {
+      "path": "./packages/proxy-sandbox"
+    }
+  ]
+}
