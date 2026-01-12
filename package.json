@@ -2,7 +2,9 @@
   "name": "vite-plugin-sandbox-monorepo",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "sync": "../syncgit/vite-plugin-sandbox-monorepo.sh"
+  },
   "private": true,
   "devDependencies": {
     "@eslint/js": "^9.8.0",
