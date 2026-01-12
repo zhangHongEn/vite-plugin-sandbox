@@ -1,18 +1,21 @@
 {
-  "name": "module-federation-vite",
-  "version": "0.0.2",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.esm.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.esm.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/index.esm.d.ts",
-      "import": "./dist/index.esm.js",
-      "default": "./dist/index.esm.js"
-    }
+  "name": "@chagee/module-federation-vite",
+  "version": "1.2.18",
+  "description": "",
+  "types": "src/index.d.ts",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:beta": "npm version patch && pnpm publish --no-git-checks --tag=beta",
+    "publish:latest": "npm version patch && pnpm publish --no-git-checks --tag=latest"
   },
-  "dependencies": {}
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "vite": "<=6"
+  },
+  "dependencies": {
+    "@module-federation/vite": "1.2.1",
+    "ws": "^8.18.1"
+  }
 }
