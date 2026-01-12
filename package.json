@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-sandbox-monorepo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "sync": "../syncgit/vite-plugin-sandbox-monorepo.sh"
