@@ -2,10 +2,10 @@ import { parse } from '@babel/parser';
 import _traverse from '@babel/traverse';
 import _generate from '@babel/generator';
 
-const traverse = _traverse.default;
-const generate = _generate.default;
+const traverse = (_traverse as any).default;
+const generate = (_generate as any).default;
 
-export function getProxyWinVarName(appCode) {
+export function getProxyWinVarName(appCode: string): string {
   return `__vite_sandbox_win__`;
   // return `__vite_sandbox_${appCode}__`;
 }
@@ -15,11 +15,11 @@ export function getProxyWinVarName(appCode) {
  * @param {*} pkg
  * @returns
  */
-export function checkTransformScope(url, code) {
+export function checkTransformScope(url: string, code: string): boolean {
   const urlSplits = url.split('?');
   const uri = urlSplits[0];
   const query = urlSplits[1] || '';
-  const ext = uri.split('.').pop();
+  const ext = uri.split('.').pop() as string;
 
   // if (
   //   url.indexOf('@chagee_vite-plugin-sandbox_dist_sandbox') !== -1 ||
@@ -50,13 +50,13 @@ export function checkTransformScope(url, code) {
  * @param {*} code
  * @returns
  */
-export function astTranform(code, proxyWinVarName) {
+export function astTranform(code: string, proxyWinVarName: string): string {
   const ast = parse(code, {
     sourceType: 'module',
   });
 
   traverse(ast, {
-    ReferencedIdentifier(path) {
+    ReferencedIdentifier(path: any) {
       if (!path.scope.getBinding(path.node.name)) {
         if (['arguments', 'process', proxyWinVarName].includes(path.node.name)) {
           return;
@@ -97,7 +97,7 @@ export function astTranform(code, proxyWinVarName) {
  * @param {*} url
  * @returns
  */
-export function checkSandBoxDistFile(url) {
+export function checkSandBoxDistFile(url: string): boolean | undefined {
   if (url.indexOf('chagee_mfe-sandbox') !== -1) {
     return true;
   }
@@ -108,13 +108,13 @@ export function checkSandBoxDistFile(url) {
  * @param {*} code
  * @returns
  */
-export function astTranformSandBoxDistFile(code) {
+export function astTranformSandBoxDistFile(code: string): string {
   const ast = parse(code, {
     sourceType: 'module',
   });
 
   traverse(ast, {
-    ImportDeclaration: (path) => {
+    ImportDeclaration: (path: any) => {
       path.remove();
     },
   });
@@ -123,3 +123,4 @@ export function astTranformSandBoxDistFile(code) {
 
   return output.code;
 }
+

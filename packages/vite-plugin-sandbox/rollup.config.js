@@ -1,26 +1,17 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
-import typescript from '@rollup/plugin-typescript';
+const { withNx } = require('@nx/rollup/with-nx');
 
-export default [
+module.exports = withNx(
   {
-    input: 'src/index.ts',
-    output: [
-      {
-        file: 'dist/index.cjs',
-        format: 'cjs',
-      },
-      {
-        file: 'dist/index.mjs',
-        format: 'esm',
-      },
-    ],
-    plugins: [
-      typescript(),
-      commonjs(),
-      json(),
-      resolve(),
-    ],
+    main: './src/index.ts',
+    outputPath: './dist',
+    tsConfig: './tsconfig.lib.json',
+    compiler: 'swc',
+    sourcemap: false,
+    format: ['esm', "cjs"],
   },
-];
+  {
+    // Provide additional rollup configuration here. See: https://rollupjs.org/configuration-options
+    // e.g.
+    // output: { sourcemap: true },
+  }
+);

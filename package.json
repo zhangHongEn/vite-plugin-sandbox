@@ -3,10 +3,22 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "sync": "../syncgit/vite-plugin-sandbox-monorepo.sh"
+    "sync": "../syncgit/vite-plugin-sandbox-monorepo.sh",
+    "build": "nx run-many -t build",
+    "enter-beta": "npx changeset pre enter beta",
+    "exit-beta": "npx changeset pre exit",
+    "changeset": "npx changeset",
+    "version": "npx changeset pre exit || true && npx changeset version",
+    "beta-version": "npx changeset pre exit || true && npx changeset pre enter beta && npx changeset version && npx changeset pre exit",
+    "bak-release": "pnpm build && changeset publish --tag latest",
+    "bak-beta-release": "pnpm build && changeset publish --tag beta",
+
+    "release": "npx changeset pre exit || true && pnpm build && changeset version && changeset publish",
+    "beta-release": "npx changeset pre enter beta || true && npx changeset version && pnpm build && npx changeset publish && npx changeset pre exit"
   },
   "private": true,
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "@eslint/js": "^9.8.0",
     "@nx/eslint": "22.3.3",
     "@nx/eslint-plugin": "22.3.3",
@@ -51,6 +63,5 @@
         }
       }
     }
-  },
-  "dependencies": {}
+  }
 }

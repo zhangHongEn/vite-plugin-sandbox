@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - test
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Version packages（beta）
+        if: github.ref == 'refs/heads/test'
+        run: npx changeset pre exit || true && npx changeset pre enter beta && npx changeset version && npx changeset pre exit
+
+      - name: Version packages（latest）
+        if: github.ref == 'refs/heads/master'
+        run: npx changeset version
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish (beta)
+        if: github.ref == 'refs/heads/test'
+        run: npx changeset publish --tag beta
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish (latest)
+        if: github.ref == 'refs/heads/master'
+        run: npx changeset publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push tags & commits
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git push --follow-tags

@@ -1,0 +1,75 @@
+# vite-plugin-sandbox-css
+
+## 2.0.2
+
+### Patch Changes
+
+- beta
+- test beta
+- Updated dependencies
+- Updated dependencies
+  - proxy-sandbox-browser@2.0.2
+
+## 2.0.2-beta.1
+
+### Patch Changes
+
+- test beta
+- Updated dependencies
+  - proxy-sandbox-browser@2.0.2-beta.1
+
+## 2.0.2-beta.0
+
+### Patch Changes
+
+- beta
+- Updated dependencies
+  - proxy-sandbox-browser@2.0.2-beta.0
+
+## 2.0.1
+
+### Patch Changes
+
+- init
+- Updated dependencies
+  - proxy-sandbox-browser@2.0.1
+
+## 2.0.0
+
+### Major Changes
+
+- init
+
+### Patch Changes
+
+- Updated dependencies
+  - proxy-sandbox-browser@2.0.0
+
+## 1.0.0
+
+### Major Changes
+
+- init
+
+### Patch Changes
+
+- Updated dependencies
+  - proxy-sandbox-browser@2.0.0
+
+## 0.0.2
+
+### Patch Changes
+
+- release
+- init
+- Updated dependencies
+- Updated dependencies
+  - proxy-sandbox-browser@1.0.1
+
+## 0.0.2-beta.0
+
+### Patch Changes
+
+- init
+- Updated dependencies
+  - proxy-sandbox-browser@1.0.1-beta.0
