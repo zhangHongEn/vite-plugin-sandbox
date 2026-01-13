@@ -1,7 +1,10 @@
 {
   "name": "vite-plugin-sandbox-css",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
@@ -30,8 +33,5 @@
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "^2.8.8",
     "rollup": "^4.18.0"
-  },
-  "publishConfig": {
-    "registry": "http://nexus.bwcjxt.com/repository/npm-snapshots/"
   }
 }
