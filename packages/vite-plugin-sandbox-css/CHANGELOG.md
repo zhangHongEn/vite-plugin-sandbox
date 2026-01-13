@@ -1,5 +1,13 @@
 # vite-plugin-sandbox-css
 
+## 2.0.3-beta.0
+
+### Patch Changes
+
+- 4087a37: test ci beta
+- Updated dependencies [4087a37]
+  - proxy-sandbox-browser@2.0.3-beta.0
+
 ## 2.0.2
 
 ### Patch Changes
