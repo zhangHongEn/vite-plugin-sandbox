@@ -1,5 +1,19 @@
 # vite-plugin-sandbox
 
+## 2.0.3-beta.11
+
+### Patch Changes
+
+- 0067991: test ci beta
+- 1bd225b: init
+- 44bea8c: init
+- 42d06d5: t
+- Updated dependencies [0067991]
+- Updated dependencies [1bd225b]
+- Updated dependencies [44bea8c]
+- Updated dependencies [42d06d5]
+  - proxy-sandbox-browser@2.0.3-beta.11
+
 ## 2.0.3-beta.0
 
 ### Patch Changes
