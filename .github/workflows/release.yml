@@ -1,7 +1,8 @@
 name: Release
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - master
       - test
@@ -12,12 +13,13 @@ permissions:
 
 jobs:
   release:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # ⚠️ 不然 tags 会出问题
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
         with:
@@ -31,34 +33,44 @@ jobs:
       - name: Install deps
         run: pnpm install --frozen-lockfile
 
-      - name: Version packages（beta）
-        if: github.ref == 'refs/heads/test'
-        run: npx changeset pre exit || true && npx changeset pre enter beta && npx changeset version && npx changeset pre exit
-
-      - name: Version packages（latest）
-        if: github.ref == 'refs/heads/master'
-        run: npx changeset version
-
-      - name: Build
-        run: pnpm build
+      # -----------------------------
+      # beta（merge → test）
+      # -----------------------------
+      - name: Version (beta)
+        if: github.base_ref == 'test'
+        run: |
+          npx changeset pre exit || true
+          npx changeset pre enter beta
+          npx changeset version
+          npx changeset pre exit
 
       - name: Publish (beta)
-        if: github.ref == 'refs/heads/test'
+        if: github.base_ref == 'test'
         run: npx changeset publish --tag beta
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      # -----------------------------
+      # latest（merge → master）
+      # -----------------------------
+      - name: Version (latest)
+        if: github.base_ref == 'master'
+        run: npx changeset version
+
       - name: Publish (latest)
-        if: github.ref == 'refs/heads/master'
+        if: github.base_ref == 'master'
         run: npx changeset publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Push tags & commits
+      # -----------------------------
+      # push version & tags
+      # -----------------------------
+      - name: Push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git commit -m "chore: release"
+          git commit -m "chore: release" || exit 0
+          git push origin HEAD:${{ github.base_ref }}
           git push origin --tags
-          git push origin ${{ github.ref_name }}
