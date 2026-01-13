@@ -2,15 +2,16 @@
   "mode": "exit",
   "tag": "beta",
   "initialVersions": {
-    "proxy-sandbox-browser": "2.0.3-beta.10",
-    "vite-plugin-sandbox": "2.0.3-beta.10",
-    "vite-plugin-sandbox-css": "2.0.3-beta.10"
+    "proxy-sandbox-browser": "2.0.3-beta.11",
+    "vite-plugin-sandbox": "2.0.3-beta.11",
+    "vite-plugin-sandbox-css": "2.0.3-beta.11"
   },
   "changesets": [
     "early-papers-lay",
     "eight-memes-hide",
     "floppy-rats-wink",
     "neat-lights-say",
+    "solid-lands-talk",
     "twenty-places-hope"
   ]
 }
