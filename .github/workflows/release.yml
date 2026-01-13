@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # ⚠️ 不然 tags 会出问题
 
       - uses: pnpm/action-setup@v4
         with:
@@ -56,4 +58,5 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git push --follow-tags
+          git commit -am "chore: release"
+          git push origin --tags

@@ -1,0 +1,12 @@
+{
+  "mode": "exit",
+  "tag": "beta",
+  "initialVersions": {
+    "proxy-sandbox-browser": "2.0.3-beta.0",
+    "vite-plugin-sandbox": "2.0.3-beta.0",
+    "vite-plugin-sandbox-css": "2.0.3-beta.0"
+  },
+  "changesets": [
+    "neat-lights-say"
+  ]
+}
