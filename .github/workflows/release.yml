@@ -60,5 +60,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .
           git status
-          git commit -m "chore: release"
+          git commit -m "chore: release1"
           git push origin --tags
