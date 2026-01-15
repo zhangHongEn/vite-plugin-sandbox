@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-sandbox",
   "version": "2.0.3-beta.11",
-  "description": "",
+  "description": "Vite plugin for JavaScript runtime isolation via proxy sandbox",
   "publishConfig": {
     "access": "public"
   },
