@@ -34,7 +34,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: build
-        run: nx run-many -t build
+        run: npm run build
       # -----------------------------
       # beta（merge → test）
       # -----------------------------
