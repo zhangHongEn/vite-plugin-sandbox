@@ -1,6 +1,7 @@
 {
   "name": "vite-plugin-sandbox-monorepo",
   "version": "0.0.1",
+  "description": "Monorepo for Vite JS sandbox and CSS namespace plugins",
   "license": "MIT",
   "scripts": {
     "sync": "../syncgit/vite-plugin-sandbox-monorepo.sh",

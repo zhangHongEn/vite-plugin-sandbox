@@ -21,7 +21,7 @@ export default function cssSandbox(options: CssSandboxOptions = {}) {
   const overlaySelectors = options.overlaySelectors || [];
   const excludeSelectors = defaultExcludeSelectors.concat(options.excludeSelectors || []);
 
-  const prefix = `.${options.prefix}`;
+  const prefix = `${options.prefix}`;
   const postCssPlugin = postcssPrefixSelector({
     prefix,
     transform(prefix: string, selector: string, prefixedSelector: string) {

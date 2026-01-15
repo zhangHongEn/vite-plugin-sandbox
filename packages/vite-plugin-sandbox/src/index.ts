@@ -8,7 +8,7 @@ import {
 import { createFilter } from '@rollup/pluginutils';
 
 export interface SandboxOptions {
-  appCode?: string;
+  code?: string;
   include?: any[];
   exclude?: any[];
   sandboxOptions?: {
@@ -19,7 +19,10 @@ export interface SandboxOptions {
 }
 
 export default (options: SandboxOptions = {}) => {
-  const appCode = options.appCode || 'app';
+  const code = options.code || 'app';
+  if (!code) {
+    throw new Error('vite-plugin-sandbox: code is required');
+  }
   const filter = createFilter(options.include || [], options.exclude || [/proxy-sandbox-browser/]);
 
   const sandboxOptions = options.sandboxOptions || {};
@@ -37,7 +40,7 @@ export default (options: SandboxOptions = {}) => {
       if (id.indexOf('proxy-sandbox-browser') !== -1 && id.indexOf('virtual=true') !== -1) {
         const res = `
           import { getProxyWin } from 'proxy-sandbox-browser';
-          const proxyWin = getProxyWin('${appCode}', ${JSON.stringify(sandboxOptions)});
+          const proxyWin = getProxyWin('${code}', ${JSON.stringify(sandboxOptions)});
           export default proxyWin;
         `;
         return res;
@@ -46,7 +49,7 @@ export default (options: SandboxOptions = {}) => {
     },
     async transform(source: string, id: string) {
       let code = source;
-      const proxyWinVarName = getProxyWinVarName(appCode);
+      const proxyWinVarName = getProxyWinVarName(code);
       if (checkSandBoxDistFile(id)) {
         code = astTranformSandBoxDistFile(source);
       }
