@@ -1,5 +1,13 @@
 # vite-plugin-sandbox
 
+## 2.0.3-beta.12
+
+### Patch Changes
+
+- 2be6101: init
+- Updated dependencies [2be6101]
+  - proxy-sandbox-browser@2.0.3-beta.12
+
 ## 2.0.3-beta.11
 
 ### Patch Changes
