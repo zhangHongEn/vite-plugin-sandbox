@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-sandbox-css",
-  "version": "2.0.3-beta.11",
-  "description": "Vite plugin that adds CSS namespace prefixes with overlay support",
+  "version": "2.0.3-beta.12",
+  "description": "",
   "publishConfig": {
     "access": "public"
   },
