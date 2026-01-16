@@ -83,5 +83,6 @@ export default defineConfig({
 ```
 
 ### Docs
-- `vite-plugin-sandbox`: see `packages/vite-plugin-sandbox/README.md`
-- `vite-plugin-sandbox-css`: see `packages/vite-plugin-sandbox-css/README.md`
+
+- `vite-plugin-sandbox`：[see](packages/vite-plugin-sandbox/README.md)
+- `vite-plugin-sandbox-css`：[see](packages/vite-plugin-sandbox-css/README.md)
