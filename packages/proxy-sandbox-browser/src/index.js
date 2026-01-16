@@ -1,5 +1,5 @@
 import ProxySandbox from './proxySandbox';
-import { setOverwrite } from './overwrite';
+import { proxyObserve } from './overwrite';
 
 const getProxyWin = (appCode, options) => {
   let ProxyWin = {
@@ -14,7 +14,7 @@ const getProxyWin = (appCode, options) => {
   ProxyWin.active();
   
   // 修复window.MutationObserver监听body时报错
-  setOverwrite();
+  proxyObserve();
   
   return ProxyWin;
 };

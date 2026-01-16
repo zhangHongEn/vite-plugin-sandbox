@@ -1,4 +1,4 @@
-export const setOverwrite = function () {
+export const proxyObserve = function () {
   if (window.__mfe_overwrite__) return;
   window.__mfe_overwrite__ = true;
 
