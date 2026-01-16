@@ -11,6 +11,19 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "sandbox",
+    "proxy",
+    "window-proxy",
+    "runtime-isolation",
+    "micro-frontend",
+    "ast-transform",
+    "babel",
+    "rollup",
+    "browser"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zhanghongen/vite-plugin-sandbox"
