@@ -23,7 +23,7 @@ export default (options: SandboxOptions = {}) => {
   if (!code) {
     throw new Error('vite-plugin-sandbox: code is required');
   }
-  const filter = createFilter(options.include || [], options.exclude || [/proxy-sandbox-browser/]);
+  const filter = createFilter(options.include || [], [/proxy-sandbox-browser/].concat(options.exclude || []));
 
   const sandboxOptions = options.sandboxOptions || {};
 
