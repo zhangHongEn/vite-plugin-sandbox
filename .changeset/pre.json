@@ -2,16 +2,21 @@
   "mode": "exit",
   "tag": "beta",
   "initialVersions": {
-    "proxy-sandbox-browser": "2.0.3-beta.11",
-    "vite-plugin-sandbox": "2.0.3-beta.11",
-    "vite-plugin-sandbox-css": "2.0.3-beta.11"
+    "proxy-sandbox-browser": "2.0.3-beta.17",
+    "vite-plugin-sandbox": "2.0.3-beta.17",
+    "vite-plugin-sandbox-css": "2.0.3-beta.17"
   },
   "changesets": [
+    "all-pigs-drop",
+    "clear-games-try",
     "early-papers-lay",
     "eight-memes-hide",
+    "empty-loops-cry",
     "floppy-rats-wink",
+    "kind-animals-wave",
     "neat-lights-say",
     "solid-lands-talk",
-    "twenty-places-hope"
+    "twenty-places-hope",
+    "warm-beans-try"
   ]
 }

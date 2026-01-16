@@ -1,5 +1,15 @@
 # proxy-sandbox-browser
 
+## 2.0.3-beta.18
+
+### Patch Changes
+
+- e2c241d: init
+- e1a7723: init
+- 0c023e0: init
+- d3e36e3: init
+- a848715: publish beta
+
 ## 2.0.3-beta.12
 
 ### Patch Changes
