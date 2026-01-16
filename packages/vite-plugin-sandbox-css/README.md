@@ -1,5 +1,9 @@
 # vite-plugin-sandbox-css
 
+[简体中文](#简体中文) | [English](#english)
+
+## 简体中文
+
 为样式选择器添加应用命名空间前缀的 Vite 插件。支持针对会插入到 `body` 的组件（如 Modal/Overlay）生成两种前缀形式，以保证隔离与可控覆盖。
 
 ## 特性

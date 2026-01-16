@@ -1,5 +1,9 @@
 # vite-plugin-sandbox-monorepo
 
+[简体中文](#简体中文) | [English](#english)
+
+## 简体中文
+
 一个包含 JS 运行时隔离与 CSS 命名空间插件的 Monorepo，用于在 Vite 项目中实现微前端样式/变量隔离。
 
 ## 包
