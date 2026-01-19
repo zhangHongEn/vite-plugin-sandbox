@@ -1,5 +1,11 @@
 # proxy-sandbox-browser
 
+## 2.0.3-beta.20
+
+### Patch Changes
+
+- 7ec72d1: change globalVariable
+
 ## 2.0.3-beta.19
 
 ### Patch Changes

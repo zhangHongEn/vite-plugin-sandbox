@@ -1,5 +1,13 @@
 # vite-plugin-sandbox-css
 
+## 2.0.3-beta.20
+
+### Patch Changes
+
+- 7ec72d1: change globalVariable
+- Updated dependencies [7ec72d1]
+  - proxy-sandbox-browser@2.0.3-beta.20
+
 ## 2.0.3-beta.19
 
 ### Patch Changes
