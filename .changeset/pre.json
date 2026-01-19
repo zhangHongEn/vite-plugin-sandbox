@@ -2,9 +2,9 @@
   "mode": "exit",
   "tag": "beta",
   "initialVersions": {
-    "proxy-sandbox-browser": "2.0.3-beta.19",
-    "vite-plugin-sandbox": "2.0.3-beta.19",
-    "vite-plugin-sandbox-css": "2.0.3-beta.19"
+    "proxy-sandbox-browser": "2.0.3-beta.20",
+    "vite-plugin-sandbox": "2.0.3-beta.20",
+    "vite-plugin-sandbox-css": "2.0.3-beta.20"
   },
   "changesets": [
     "all-pigs-drop",
@@ -14,6 +14,7 @@
     "empty-loops-cry",
     "floppy-rats-wink",
     "kind-animals-wave",
+    "large-oranges-stare",
     "neat-lights-say",
     "proud-squids-switch",
     "shaggy-papayas-strive",
