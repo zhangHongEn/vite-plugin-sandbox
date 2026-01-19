@@ -1,5 +1,33 @@
 # proxy-sandbox-browser
 
+## 2.0.3-beta.21
+
+### Patch Changes
+
+- 6a4c5a3: init release 1.0.x
+
+## 2.0.3-beta.20
+
+### Patch Changes
+
+- 7ec72d1: change globalVariable
+
+## 2.0.3-beta.19
+
+### Patch Changes
+
+- 646db01: init beta
+
+## 2.0.3-beta.18
+
+### Patch Changes
+
+- e2c241d: init
+- e1a7723: init
+- 0c023e0: init
+- d3e36e3: init
+- a848715: publish beta
+
 ## 2.0.3-beta.12
 
 ### Patch Changes

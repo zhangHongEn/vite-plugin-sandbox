@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-sandbox-css",
-  "version": "2.0.3-beta.17",
+  "version": "2.0.3-beta.21",
   "description": "Vite plugin that adds CSS namespace prefixes with overlay support",
   "publishConfig": {
     "access": "public"
@@ -15,6 +15,21 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "css",
+    "namespace",
+    "selector-prefix",
+    "prefix",
+    "postcss",
+    "postcss-prefix-selector",
+    "overlay",
+    "portal",
+    "teleport",
+    "micro-frontend",
+    "scoped-css"
+  ],
   "scripts": {
     "build": "rollup --config",
     "pub": "npm run build && npm publish",

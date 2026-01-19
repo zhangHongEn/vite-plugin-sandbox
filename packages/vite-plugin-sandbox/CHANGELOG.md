@@ -1,5 +1,45 @@
 # vite-plugin-sandbox
 
+## 2.0.3-beta.21
+
+### Patch Changes
+
+- 6a4c5a3: init release 1.0.x
+- Updated dependencies [6a4c5a3]
+  - proxy-sandbox-browser@2.0.3-beta.21
+
+## 2.0.3-beta.20
+
+### Patch Changes
+
+- 7ec72d1: change globalVariable
+- Updated dependencies [7ec72d1]
+  - proxy-sandbox-browser@2.0.3-beta.20
+
+## 2.0.3-beta.19
+
+### Patch Changes
+
+- 646db01: init beta
+- Updated dependencies [646db01]
+  - proxy-sandbox-browser@2.0.3-beta.19
+
+## 2.0.3-beta.18
+
+### Patch Changes
+
+- e2c241d: init
+- e1a7723: init
+- 0c023e0: init
+- d3e36e3: init
+- a848715: publish beta
+- Updated dependencies [e2c241d]
+- Updated dependencies [e1a7723]
+- Updated dependencies [0c023e0]
+- Updated dependencies [d3e36e3]
+- Updated dependencies [a848715]
+  - proxy-sandbox-browser@2.0.3-beta.18
+
 ## 2.0.3-beta.12
 
 ### Patch Changes

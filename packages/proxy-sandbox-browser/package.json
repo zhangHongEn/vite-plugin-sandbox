@@ -1,10 +1,21 @@
 {
   "name": "proxy-sandbox-browser",
-  "version": "2.0.3-beta.17",
+  "version": "2.0.3-beta.21",
   "publishConfig": {
     "access": "public"
   },
   "description": "",
+  "keywords": [
+    "sandbox",
+    "browser",
+    "window-proxy",
+    "micro-frontend",
+    "runtime-isolation",
+    "import-html-entry",
+    "dom",
+    "isolation",
+    "security"
+  ],
   "files": [
     "dist"
   ],
@@ -24,8 +35,7 @@
   "license": "ISC",
   "dependencies": {
     "import-html-entry": "^1.17.0",
-    "lodash": "^4.17.21",
-    "qiankun": "^2.10.16"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
