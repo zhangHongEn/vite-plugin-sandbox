@@ -33,7 +33,7 @@ export default defineConfig({
     sandbox({ code: 'app1' }),
     cssSandbox({
       prefix: '.app1',
-      overlaySelectors: ['.modal', '.popup'],
+      overlaySelectors: ['.modal', '.popup', '.el-', '.ant-'],
     }),
   ],
 });
@@ -90,7 +90,7 @@ export default defineConfig({
     sandbox({ code: 'app1' }),
     cssSandbox({
       prefix: '.app1',
-      overlaySelectors: ['.modal', '.popup'],
+      overlaySelectors: ['.modal', '.popup', '.el-', '.ant-'],
     }),
   ],
 });
