@@ -5,11 +5,14 @@ const getProxyWin = (appCode, options) => {
   let ProxyWin = {
     proxy: window,
   };
-  if (window[`__proxy_win_${appCode}`]) {
-    ProxyWin = window[`__proxy_win_${appCode}`];
+  if (!window.__proxySandbox__) {
+    window.__proxySandbox__ = {}
+  }
+  if (window.__proxySandbox__[appCode]) {
+    ProxyWin = window.__proxySandbox__[appCode];
   } else {
     ProxyWin = new ProxySandbox(appCode, options);
-    window[`__proxy_win_${appCode}`] = ProxyWin;
+    window.__proxySandbox__[appCode] = ProxyWin;
   }
   ProxyWin.active();
   
