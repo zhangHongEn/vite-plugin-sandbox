@@ -1,6 +1,6 @@
 # vite-plugin-sandbox-monorepo
 
-![npm package](https://img.shields.io/npm/v/vite-plugin-sandbox.svg)
+[![npm](https://img.shields.io/npm/v/vite-plugin-sandbox.svg)](https://www.npmjs.com/package/vite-plugin-sandbox)
 
 [简体中文](#简体中文) | [English](#english)
 
